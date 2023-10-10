@@ -1,113 +1,241 @@
-import Image from 'next/image'
-
+import Image from "next/image";
+import React from "react";
+import { AiOutlinePlus } from "react-icons/ai";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div className="overflow-x-hidden w-full">
+        <svg
+          className="ven-info__svg object-fit"
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="685"
+          viewBox="0 0 1920 685"
+          fill="none"
+        >
+          <path d="M1920 -254H0V685L1920 555.689V-254Z" fill="#372656" />
+        </svg>
+      </div>
+
+      <h1 className="-mt-[600px] px-52 italic text-purple-400 text-center text-4xl font-semibold">
+        pixel <span className="font-thin italic">law</span>
+      </h1>
+
+      <div className="flex">
+        <div className="ml-20 mt-24 flex flex-col md:flex-row md:justify-center md:items-start items-center justify-start gap-4">
+          <div className="p-4">
+            <h3 className="text-white italic text-5xl font-semibold">
+              Free Guide
+            </h3>
+            <h3 className="text-white text-5xl font-semibold mt-16">
+              The Lawyer&#39;s Guide to Entrepreneurship
+            </h3>
+            <p className="text-white text-xl font-thin mt-7">
+              Maximize your success with the right legal foundation.
+            </p>
+            <button className="mt-7 bg-purple-500 px-4 py-2 text-white rounded-full text-lg font-medium hover:bg-[#372656]">
+              Download Now
+            </button>
+          </div>
+
+          <div className="mr-24">
+            <Image src="/pic.webp" alt="Panaverse" width={510} height={612} />
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="flex flex-row gap-28 mt-40 justify-center items-center">
+        <div>
+          <h3 className="text-black ml-20 text-2xl font-normal">
+            Intellectual Property
+          </h3>
+          <h3 className="text-black ml-20 text-xl font-normal mt-6">
+            Copyrights & More
+          </h3>
+          <p className="text-black/60 ml-20">
+            Your IP may be among your most
+            <br />
+            valuable assets. Learn how to
+            <br />
+            protect and exploit it.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-black ml-20 text-2xl font-normal">Contracts</h3>
+          <h3 className="text-black ml-20 text-xl font-normal mt-6">
+            Do it the right way!
+          </h3>
+          <p className="text-black/60 ml-20">
+            Contracts don&#39;t have to be
+            <br />
+            difficult. Learn expert tips to
+            <br />
+            make contracts easier for you.
+          </p>
+        </div>
+        <div className="ml-14">
+          <h3 className="text-black ml-20 text-2xl font-normal">
+            Additional Resources
+          </h3>
+          <h3 className="text-black ml-20 text-xl font-normal mt-6">
+            There&#39;s more!
+          </h3>
+          <p className="text-black/60 ml-20">
+            Find links to additional resources
+            <br />
+            that can help every entrepreneur.
+          </p>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+      <div className="flex flex-row gap-28 mt-24 justify-center items-center">
+        <div>
+          <h3 className="text-black ml-20 text-2xl font-normal">
+            Incorporating
+          </h3>
+          <h3 className="text-black ml-20 text-xl font-normal mt-6">
+            LLCs & More
+          </h3>
+          <p className="text-black/60 ml-20">
+            Get the details on LLCs, whether
+            <br /> you need one, and how to create
+            <br /> one.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+        </div>
+        <div>
+          <h3 className="text-black ml-20 text-2xl font-normal">
+            Finances & Taxes
+          </h3>
+          <h3 className="text-black ml-20 text-xl font-normal mt-6">
+            You can&#39;t ignore the numbers!
+          </h3>
+          <p className="text-black/60 ml-20">
+            Learn how to manage your
+            <br />
+            finances and pay taxes as a<br />
+            business owner.
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
+        </div>
+        <div>
+          <h3 className="text-black ml-20 text-2xl font-normal">
+            Hiring People
+          </h3>
+          <h3 className="text-black ml-20 text-xl font-normal mt-6">
+            Employees v. Contractors
+          </h3>
+          <p className="text-black/60 ml-20">
+            Explore the differences between
+            <br />
+            different kinds of workers and
+            <br />
+            how to hire the right way.
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        </div>
       </div>
-    </main>
-  )
+
+      <div className="flex flex-col justify-center items-center">
+        <div className=" shadow-2xl w-[75%] bg-white  m-auto h-[60%]  rounded-3xl mt-64 z-50">
+          <h3 className="text-2xl font-medium ml-14 mt-7 py-12">
+            Free Guide: The Lawyer&#39;s Guide to Entrepreneurship
+          </h3>
+          <p className="ml-14 -mt-5 text-lg text-black/60">
+            Maximize your success with the right legal foundation.
+          </p>
+          <div className="flex flex-row mt-16 ml-6">
+            <Image src="/pic.webp" alt="Panaverse" width={250} height={150} />
+            <div className="flex flex-col space-y-4">
+              <p className="ml-1 text-lg  text-black/60 inline-flex items-center space-x-4">
+                <span className="text-purple-400">
+                  <AiOutlinePlus />
+                </span>
+                <span>LLCs v. Corporations</span>
+              </p>
+
+              <p className="ml-1 text-lg  text-black/60 inline-flex items-center space-x-4">
+                <span className="text-purple-400">
+                  <AiOutlinePlus />
+                </span>
+                <span>Finances & Taxes</span>
+              </p>
+
+              <p className="ml-1 text-lg  text-black/60 inline-flex items-center space-x-4">
+                <span className="text-purple-400">
+                  <AiOutlinePlus />
+                </span>
+                <span>How to Hire</span>
+              </p>
+
+              <p className="ml-1 text-lg  text-black/60 inline-flex items-center space-x-4">
+                <span className="text-purple-400">
+                  <AiOutlinePlus />
+                </span>
+                <span>Contracts</span>
+              </p>
+
+              <p className="ml-1 text-lg  text-black/60 inline-flex items-center space-x-4">
+                <span className="text-purple-400">
+                  <AiOutlinePlus />
+                </span>
+                <span>And More!</span>
+              </p>
+
+              <p className="ml-1 text-lg  text-black/60 inline-flex items-center space-x-4">
+                <span className="text-purple-400">
+                  <AiOutlinePlus />
+                </span>
+                <span>And More!</span>
+              </p>
+            </div>
+            <div className="flex flex-col ml-10 " >
+            <h3 className="text-xl font-semibold ">Get Your Free Copy</h3>
+            <div className="mt-10 ">
+              <input
+                placeholder="First Name"
+                type="text"
+                required
+                name="name"
+                className="p-2 w-80 bg-[#F2F1F3] border-b-2 border-solid border-[#372656] rounded-md focus:outline-none text-gray-400"
+              />
+            </div>
+            <div className="my-5">
+              <input
+                required
+                className="p-2 w-80 bg-[#F2F1F3] border-b-2 border-solid border-[#372656] rounded-md focus:outline-none text-gray-400"
+                placeholder="Where are you located?"
+                type="location"
+                name="location"
+              />
+            </div>
+            <div>
+            <input
+                required
+                className="p-2 w-80 bg-[#F2F1F3] border-b-2 border-solid border-[#372656] rounded-md focus:outline-none text-gray-400"
+                placeholder="Email Address"
+                type="email"
+                name="email"
+              />
+            </div>
+            </div>
+          </div>
+
+          <button className="-mt-14 mb-6 ml-[700px] bg-purple-500 px-4 py-2 text-white rounded-full text-lg font-medium hover:bg-[#372656]">
+            Download Now!
+          </button>
+        </div>
+      </div>
+
+      <div className="bg-[#372656] text-white text-center py-48 -mt-40 -z-50">
+        <div className="mt-28">
+          <h3 className="text-xl font-medium">BOULDER | KANSAS CITY</h3>
+          <p className="text-sm font-mono mt-6">
+            © 2023 Pixel Law | Terms of Use | Privacy Policy
+          </p>
+          <p className="text-sm font-mono mt-4">
+            The choice of a lawyer is an important decision and should not be
+            based solely upon advertisements.
+          </p>
+        </div>
+      </div>
+    </>
+  );
 }
