@@ -1,6 +1,10 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import { AiOutlinePlus } from "react-icons/ai";
+
+import FeatureItem from "./components/FeatureItem.jsx";
+import { featuresList } from "./data";
+
 export default function Home() {
   return (
     <>
@@ -44,93 +48,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-row gap-28 mt-40 justify-center items-center">
-        <div>
-          <h3 className="text-black ml-20 text-2xl font-normal">
-            Intellectual Property
-          </h3>
-          <h3 className="text-black ml-20 text-xl font-normal mt-6">
-            Copyrights & More
-          </h3>
-          <p className="text-black/60 ml-20">
-            Your IP may be among your most
-            <br />
-            valuable assets. Learn how to
-            <br />
-            protect and exploit it.
-          </p>
-        </div>
-        <div>
-          <h3 className="text-black ml-20 text-2xl font-normal">Contracts</h3>
-          <h3 className="text-black ml-20 text-xl font-normal mt-6">
-            Do it the right way!
-          </h3>
-          <p className="text-black/60 ml-20">
-            Contracts don&#39;t have to be
-            <br />
-            difficult. Learn expert tips to
-            <br />
-            make contracts easier for you.
-          </p>
-        </div>
-        <div className="ml-14">
-          <h3 className="text-black ml-20 text-2xl font-normal">
-            Additional Resources
-          </h3>
-          <h3 className="text-black ml-20 text-xl font-normal mt-6">
-            There&#39;s more!
-          </h3>
-          <p className="text-black/60 ml-20">
-            Find links to additional resources
-            <br />
-            that can help every entrepreneur.
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-row gap-28 mt-24 justify-center items-center">
-        <div>
-          <h3 className="text-black ml-20 text-2xl font-normal">
-            Incorporating
-          </h3>
-          <h3 className="text-black ml-20 text-xl font-normal mt-6">
-            LLCs & More
-          </h3>
-          <p className="text-black/60 ml-20">
-            Get the details on LLCs, whether
-            <br /> you need one, and how to create
-            <br /> one.
-          </p>
-        </div>
-        <div>
-          <h3 className="text-black ml-20 text-2xl font-normal">
-            Finances & Taxes
-          </h3>
-          <h3 className="text-black ml-20 text-xl font-normal mt-6">
-            You can&#39;t ignore the numbers!
-          </h3>
-          <p className="text-black/60 ml-20">
-            Learn how to manage your
-            <br />
-            finances and pay taxes as a<br />
-            business owner.
-          </p>
-        </div>
-        <div>
-          <h3 className="text-black ml-20 text-2xl font-normal">
-            Hiring People
-          </h3>
-          <h3 className="text-black ml-20 text-xl font-normal mt-6">
-            Employees v. Contractors
-          </h3>
-          <p className="text-black/60 ml-20">
-            Explore the differences between
-            <br />
-            different kinds of workers and
-            <br />
-            how to hire the right way.
-          </p>
-        </div>
+      <div className="flex flex-row gap-28 mt-40 justify-center items-center flex-wrap">
+        {featuresList.map((feature, index) => {
+          return <FeatureItem feature={feature} key={index} />;
+        })}
       </div>
 
       <div className="flex flex-col justify-center items-center">
@@ -186,35 +107,35 @@ export default function Home() {
                 <span>And More!</span>
               </p>
             </div>
-            <div className="flex flex-col ml-10 " >
-            <h3 className="text-xl font-semibold ">Get Your Free Copy</h3>
-            <div className="mt-10 ">
-              <input
-                placeholder="First Name"
-                type="text"
-                required
-                name="name"
-                className="p-2 w-80 bg-[#F2F1F3] border-b-2 border-solid border-[#372656] rounded-md focus:outline-none text-gray-400"
-              />
-            </div>
-            <div className="my-5">
-              <input
-                required
-                className="p-2 w-80 bg-[#F2F1F3] border-b-2 border-solid border-[#372656] rounded-md focus:outline-none text-gray-400"
-                placeholder="Where are you located?"
-                type="location"
-                name="location"
-              />
-            </div>
-            <div>
-            <input
-                required
-                className="p-2 w-80 bg-[#F2F1F3] border-b-2 border-solid border-[#372656] rounded-md focus:outline-none text-gray-400"
-                placeholder="Email Address"
-                type="email"
-                name="email"
-              />
-            </div>
+            <div className="flex flex-col ml-10 ">
+              <h3 className="text-xl font-semibold ">Get Your Free Copy</h3>
+              <div className="mt-10 ">
+                <input
+                  placeholder="First Name"
+                  type="text"
+                  required
+                  name="name"
+                  className="p-2 w-80 bg-[#F2F1F3] border-b-2 border-solid border-[#372656] rounded-md focus:outline-none text-gray-400"
+                />
+              </div>
+              <div className="my-5">
+                <input
+                  required
+                  className="p-2 w-80 bg-[#F2F1F3] border-b-2 border-solid border-[#372656] rounded-md focus:outline-none text-gray-400"
+                  placeholder="Where are you located?"
+                  type="location"
+                  name="location"
+                />
+              </div>
+              <div>
+                <input
+                  required
+                  className="p-2 w-80 bg-[#F2F1F3] border-b-2 border-solid border-[#372656] rounded-md focus:outline-none text-gray-400"
+                  placeholder="Email Address"
+                  type="email"
+                  name="email"
+                />
+              </div>
             </div>
           </div>
 
